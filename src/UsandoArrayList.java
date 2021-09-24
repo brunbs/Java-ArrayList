@@ -1,4 +1,6 @@
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /* MÉTODOS DE ARRAYLIST NESTE ARQUIVO:
@@ -11,6 +13,7 @@ size() : retorna quantos elementos estão no arrayList
 clear() : limpa o ArrayList
 contains() : checa se um certo valor está no ArrayList
 equals() : compara duas listas para saber se tem os mesmos elementos e na mesma ordem
+Collections.sort() : ordena utilizando uma classe helper
 
  */
 public class UsandoArrayList {
@@ -126,6 +129,15 @@ public class UsandoArrayList {
         dois.add(0, "b"); //[b,a]
         System.out.println(um.equals(dois)); //false
 
+        System.out.println("############################");
+
+        // Método sort() : ordena utilizando uma classe helper: deve importar java.util.Collections
+        List<Integer> numeros = new ArrayList<>();
+        numeros.add(99);
+        numeros.add(5);
+        numeros.add(81);
+        Collections.sort(numeros);
+        System.out.println(numeros); // [5, 81, 99]
 
     }
 }
